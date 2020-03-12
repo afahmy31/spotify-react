@@ -1,11 +1,21 @@
-import { types, onSnapshot } from "mobx-state-tree";
+import { observable, action, decorate } from "mobx";
 
-const Store = types.model("Store", {
-    playlistId: types.string
-})
+class Store {
+    playlistId = "";
 
-const store = Store.create({
-    playlistId: ""
-})
+    changePlaylist(newId) {
+        this.playlistId = newId;
+    }
+    clearPlaylistId() {
+        this.playlistId = "";
+    }
+}
+
+decorate(Store, {
+    playlistId: observable,
+    changePlaylist: action,
+    clearPlaylistId: action
+});
+var store = window.store  = new Store();
 
 export default store;

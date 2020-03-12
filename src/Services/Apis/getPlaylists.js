@@ -1,7 +1,7 @@
-import axios from './axios-instance';
+import axios from '../axios-instance';
 
-const getPlaylists = async () => {
-    const url = `https://api.spotify.com/v1/browse/featured-playlists?country=EG&limit=5&offset=0`;
+const getPlaylists = async (offset) => {
+    const url = `https://api.spotify.com/v1/browse/featured-playlists?country=EG&limit=5&offset=${offset}`;
     try {
         const res = await axios.get(url);
         return {

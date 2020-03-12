@@ -1,4 +1,4 @@
-import axios from './axios-instance';
+import axios from '../axios-instance';
 
 const getTracks = async (playlistId) => {
     const url = `https://api.spotify.com/v1/playlists/${playlistId}/tracks`;

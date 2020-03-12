@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Important Note
 
-Before Starting the application, please create a `.env` file containing only `REACT_APP_SPOTIFY_TOKEN` with a valid spotify token.
+Before Starting the application, please create a `.env` file in the project directory containing only `REACT_APP_SPOTIFY_TOKEN` with a valid spotify token.
 
 ## Available Scripts
 
